@@ -1,0 +1,27 @@
+{
+    "name": "newfiesmodule",
+    "version": "1.0.0",
+    "description": "Newfies module is a module mainly for Newfie, however feel free to use it.",
+    "main": "index.js",
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Newfies/module.git"
+    },
+    "keywords": [
+      "Newfies",
+      "Node",
+      "NPM",
+      "Package"
+    ],
+    "author": "Newfies (https://github.com/Newfies)",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/Newfies/module/issues"
+    },
+    "homepage": "https://Newfies.github.io/module"
+  }
+  
