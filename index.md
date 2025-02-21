@@ -17,7 +17,3 @@
 ### Define NewfiesJS
 	
 	const njs = require("newfiesjs")
-
-### Is NewfiesJS Loaded?
-	
-	njs.loaded();
