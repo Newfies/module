@@ -20,6 +20,4 @@
 
 ### Whats Configurable?
 
-- logColorError
-- logReminderColor
-- reminderConfig
+- reminderConfig [true/false]
