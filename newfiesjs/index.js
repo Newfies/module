@@ -8,8 +8,6 @@
 
 // Settings Table
 const settings = {
-    logColorError: 'red',
-    logReminderColor: 'pink',
     reminderConfig: true
 };
 
@@ -17,6 +15,7 @@ const settings = {
 function config(option, value) {
     if (settings.hasOwnProperty(option)) {
         settings[option] = value;
+        console.log(`Set ${option} to ${value}`)
     } else {
         console.warn(`Unknown setting: ${option}`);
     }
@@ -30,15 +29,15 @@ const clog = console.log;
 /* -------------------------------------------------------------------------- */
 /*                                    Misc                                    */
 /* -------------------------------------------------------------------------- */
-function checkReminder(){
+setTimeout(function(){
     if (settings.reminderConfig == true){
         console.log("Make Custom Changes To NewfiesJS By Using njs.config(setting, value)")
+        console.log("You can hide these messages by using njs.config('reminderConfig', false)")
     }
-}
+}, 1000);
 
-checkReminder();
 
 /* -------------------------------------------------------------------------- */
 /*                                  Exporting                                 */
 /* -------------------------------------------------------------------------- */
-module.exports = { settings, config, checkReminder };
+module.exports = { settings, config };
