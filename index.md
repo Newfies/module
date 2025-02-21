@@ -7,8 +7,8 @@
 
 <hr>
 
-### Using NewfiesJS
+# Using NewfiesJS
 
-	#### Define NewfiesJS
+### Define NewfiesJS
 	
 	const njs = require("newfiesjs")
