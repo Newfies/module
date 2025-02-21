@@ -15,4 +15,4 @@
 
 ### Is NewfiesJS Loaded?
 	
-	njs.loaded(); // When running your server, if you see "NewfiesJS has loaded successfully!" then that means it has been loaded.
+	njs.loaded();
