@@ -2,4 +2,4 @@ remote_theme: pages-themes/hacker@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Newfies Module
-description: A Node Module Primarily For Newfies To Use!
+description: This module contains random things in every aspect, and is generally meant to make things a bit easier for me to do, however feel free to use it!
