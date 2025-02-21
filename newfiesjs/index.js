@@ -1,7 +1,41 @@
+/* -------------------------------------------------------------------------- */
+/*                            Imports and Requires                            */
+/* -------------------------------------------------------------------------- */
 import chalk from 'chalk';
 
+/* -------------------------------------------------------------------------- */
+/*                          Settings and Customizers                          */
+/* -------------------------------------------------------------------------- */
+
+// Settings Table
+const settings = {
+    logColorError: 'red',
+    logReminderColor: 'pink',
+    reminderConfig: true
+};
+
+// Settings Config Function
+function config(option, value) {
+    if (settings.hasOwnProperty(option)) {
+        settings[option] = value;
+    } else {
+        console.warn(`Unknown setting: ${option}`);
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Variables                                 */
+/* -------------------------------------------------------------------------- */
 const clog = console.log;
 
-// Im Still Thinking On This, Gonna Add A System For Autoclearing Console, Printing Console To A Log File, Etc.
+/* -------------------------------------------------------------------------- */
+/*                                    Misc                                    */
+/* -------------------------------------------------------------------------- */
+if (settings.reminderConfig == true){
+    console.log("Make Custom Changes To NewfiesJS By Using njs.config(setting, value)")
+}
 
-module.exports = {  };
+/* -------------------------------------------------------------------------- */
+/*                                  Exporting                                 */
+/* -------------------------------------------------------------------------- */
+module.exports = { settings, config };

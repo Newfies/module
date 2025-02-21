@@ -1,1 +1,1 @@
-# [README](https://newfies.github.io/module/)
+# [All Information For NewfiesJS Has Been Put On The GitHub Page](https://newfies.github.io/module/)
