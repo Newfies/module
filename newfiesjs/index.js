@@ -1,7 +1,6 @@
 /* -------------------------------------------------------------------------- */
 /*                            Imports and Requires                            */
 /* -------------------------------------------------------------------------- */
-import chalk from 'chalk';
 
 /* -------------------------------------------------------------------------- */
 /*                          Settings and Customizers                          */
@@ -31,11 +30,15 @@ const clog = console.log;
 /* -------------------------------------------------------------------------- */
 /*                                    Misc                                    */
 /* -------------------------------------------------------------------------- */
-if (settings.reminderConfig == true){
-    console.log("Make Custom Changes To NewfiesJS By Using njs.config(setting, value)")
+function checkReminder(){
+    if (settings.reminderConfig == true){
+        console.log("Make Custom Changes To NewfiesJS By Using njs.config(setting, value)")
+    }
 }
+
+checkReminder();
 
 /* -------------------------------------------------------------------------- */
 /*                                  Exporting                                 */
 /* -------------------------------------------------------------------------- */
-module.exports = { settings, config };
+module.exports = { settings, config, checkReminder };

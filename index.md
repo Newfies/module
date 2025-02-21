@@ -2,7 +2,7 @@
 
 ### NewfiesJS Dependencies
 	 
-	npm install chalk@5.4.1
+	None Yet!
 
 ### Install NewfiesJS
 
