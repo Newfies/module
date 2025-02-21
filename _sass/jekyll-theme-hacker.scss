@@ -113,7 +113,7 @@ section img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
+  font-weight: 600;
   font-family: "Ubuntu", serif;
   color: $header;
   letter-spacing: -0.03em;
@@ -169,13 +169,14 @@ blockquote {
 pre {
   background: rgba(0, 0, 0, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 10px;
+  padding: 12.5px;
   font-size: 16px;
   color: #bb2222;
   border-radius: 2px;
   word-wrap: normal;
   overflow: auto;
   overflow-y: hidden;
+  border-radius: 8px;
 }
 
 code.highlighter-rouge {
