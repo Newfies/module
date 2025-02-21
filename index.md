@@ -1,7 +1,7 @@
-# Newfies Module
+# NewfiesJS
 
-### Install Newfies Module
+### Install NewfiesJS
 
     
-    npm install newfiesmodule
+    npm install newfiesjs
 
