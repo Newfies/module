@@ -1,5 +1,5 @@
-function newfiesPlaceholder() {
-    return console.log("Yo mama");
+function loaded() {
+    return console.log("NewfiesJS has loaded successfully!);
 }
 
-module.exports = { newfiesPlaceholder };
+module.exports = { loaded };
