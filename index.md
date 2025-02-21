@@ -1,6 +1,6 @@
 # NewfiesJS
 
-	` This is like a WIP, IDK how far this will even go `
+` This is like a WIP, IDK how far this will even go `
 
 ### NewfiesJS Dependencies
 	 
