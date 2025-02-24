@@ -1,1 +1,2 @@
+This is just a passion/bored project, meant for me to use for future projects. Don't expect anything from this, but feedback is welcome :D
 # [All Information For NewfiesJS Has Been Put On The GitHub Page](https://newfies.github.io/module/)
