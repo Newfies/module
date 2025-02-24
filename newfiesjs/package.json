@@ -1,6 +1,6 @@
 {
     "name": "newfiesjs",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "Newfies module is a module mainly for Newfie, however feel free to use it.",
     "main": "index.js",
     "devDependencies": {},
@@ -20,7 +20,8 @@
       "Ease",
       "Logging",
       "Console Logging",
-      "Console.Log"
+      "Console.Log",
+      "Chalk"
     ],
     "author": "Newfies (https://github.com/Newfies)",
     "license": "MIT",
