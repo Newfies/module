@@ -9,8 +9,18 @@ const chalk = require('chalk'); // Chalk v4.1.2 Should Work Here
 
 // Settings Table
 const settings = {
-    reminderConfig: true
+    reminderConfig: true,
+    ErrorColor: "red",
+    MessageColor: "white",
+    TimestampColor: "black",
+    ServerColor: "black",
+    TimestampBGColor: "purple",
+    ServerBGColor: "green",
 };
+
+// [Timestamp] | [Server] - [Message]
+// ErrorColor, Message Color, Timestamp Text Color, Server Text Color, 
+// These Are Ideas Until I Impliment
 
 // Settings Config Function
 function config(option, value) {
