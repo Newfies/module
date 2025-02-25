@@ -23,7 +23,7 @@ const settings = {
 function config(option, value) {
     if (settings.hasOwnProperty(option)) {
         settings[option] = value;
-        // console.log(`Set ${option} to ${value}`)
+        // console.log(`Set ${option} to ${value}`); | Ill Add This Later Lol
     } else {
         console.warn(`Unknown setting: ${option}`);
     }
@@ -39,8 +39,8 @@ const clog = console.log;
 /* -------------------------------------------------------------------------- */
 function njsLog(message, type = "info") {
     const timestamp = new Date().toLocaleTimeString();
-    const formattedTimestamp = chalk.bgKeyword(settings.TimestampBGColor).keyword(settings.TimestampColor)(` ${timestamp} `);
-    const formattedServer = chalk.bgKeyword(settings.ServerBGColor).keyword(settings.ServerColor)(` [${settings.ServerName}] `);
+    const formattedTimestamp = chalk.bgKeyword(settings.TimestampBGColor).keyword(settings.TimestampColor)(`${timestamp}`);
+    // const formattedServer = chalk.bgKeyword(settings.ServerBGColor).keyword(settings.ServerColor)(` [${settings.ServerName}] `);
     
     let formattedMessage;
     switch (type) {
@@ -51,7 +51,7 @@ function njsLog(message, type = "info") {
             formattedMessage = chalk.keyword(settings.MessageColor)(message);
     }
     
-    console.log(`${formattedTimestamp} | ${formattedServer} ${formattedMessage}`);
+    console.log(`[${formattedTimestamp}] | ${formattedMessage}`);
 }
 
 /* -------------------------------------------------------------------------- */
