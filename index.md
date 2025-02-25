@@ -28,3 +28,4 @@
 - ServerColor [any color supported by chalk for text]
 - TimestampBGColor [any color supported by chalk for text backgrounds]
 - ServerBGColor [any color supported by chalk for text backgrounds]
+- ServerName [string]

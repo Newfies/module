@@ -1,6 +1,6 @@
 {
     "name": "newfiesjs",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Newfies module is a module mainly for Newfie, however feel free to use it.",
     "main": "index.js",
     "devDependencies": {},
