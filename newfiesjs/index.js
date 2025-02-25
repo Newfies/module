@@ -50,11 +50,7 @@ function njsLog(message, type = "info") {
     }
     
     console.log(`[${formattedTimestamp}] | ${formattedMessage}`);
-
-    // ChatGPT
-    const logEntry = `${formattedTimestamp} |${formattedServer} ${formattedMessage}`;
-    console.log(logEntry);
-    logToFile(`${timestamp} | [${settings.ServerName}] ${message}`, type);
+    logToFile(`${timestamp} | ${message}`, type);
 
 }
 
