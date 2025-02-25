@@ -1,7 +1,8 @@
 /* -------------------------------------------------------------------------- */
 /*                            Imports and Requires                            */
 /* -------------------------------------------------------------------------- */
-const chalk = require('chalk'); // Chalk v4.1.2 Should Work Here
+const chalk = require('chalk'); // Chalk v4.1.2
+const fs = require('fs'); // File System for Logging
 
 /* -------------------------------------------------------------------------- */
 /*                          Settings and Customizers                          */
@@ -12,18 +13,16 @@ const settings = {
     reminderConfig: true,
     ErrorColor: "red",
     MessageColor: "white",
-    TimestampColor: "black",
-    ServerColor: "black",
+    // MessageBGColor: "none", | Not Added Yet
+    TimestampColor: "white",
     TimestampBGColor: "purple",
-    ServerBGColor: "green",
-    ServerName: "NewfiesJS"
+    LogFilePath: "logs.txt" // Added But May Have Issues
 };
 
 // Settings Config Function
 function config(option, value) {
     if (settings.hasOwnProperty(option)) {
         settings[option] = value;
-        // console.log(`Set ${option} to ${value}`); | Ill Add This Later Lol
     } else {
         console.warn(`Unknown setting: ${option}`);
     }
@@ -40,7 +39,6 @@ const clog = console.log;
 function njsLog(message, type = "info") {
     const timestamp = new Date().toLocaleTimeString();
     const formattedTimestamp = chalk.bgKeyword(settings.TimestampBGColor).keyword(settings.TimestampColor)(`${timestamp}`);
-    // const formattedServer = chalk.bgKeyword(settings.ServerBGColor).keyword(settings.ServerColor)(` [${settings.ServerName}] `);
     
     let formattedMessage;
     switch (type) {
@@ -52,7 +50,22 @@ function njsLog(message, type = "info") {
     }
     
     console.log(`[${formattedTimestamp}] | ${formattedMessage}`);
+
+    // ChatGPT
+    const logEntry = `${formattedTimestamp} |${formattedServer} ${formattedMessage}`;
+    console.log(logEntry);
+    logToFile(`${timestamp} | [${settings.ServerName}] ${message}`, type);
+
 }
+
+// ChatGPT
+function logToFile(logMessage, type) {
+    const logEntry = `[${type.toUpperCase()}] ${logMessage}\n`;
+    fs.appendFile(settings.LogFilePath, logEntry, (err) => {
+        if (err) console.error("Failed to write to log file:", err);
+    });
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                                    Misc                                    */
@@ -68,4 +81,4 @@ setTimeout(function(){
 /* -------------------------------------------------------------------------- */
 /*                                  Exporting                                 */
 /* -------------------------------------------------------------------------- */
-module.exports = { chalk, settings, config, njsLog };
+module.exports = { chalk, fs, settings, config, njsLog, logToFile };

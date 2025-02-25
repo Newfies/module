@@ -3,6 +3,7 @@
 ### NewfiesJS Dependencies
 	 
 	chalk@4.1.2
+	fs
 
 ### Install NewfiesJS
 
@@ -26,3 +27,4 @@
 - MessageColor [any color supported by chalk for text]
 - TimestampColor [any color supported by chalk for text]
 - TimestampBGColor [any color supported by chalk for text backgrounds]
+- LogFilePath [any file path]
