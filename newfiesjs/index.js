@@ -13,10 +13,9 @@ const settings = {
     reminderConfig: true,
     ErrorColor: "red",
     MessageColor: "white",
-    // MessageBGColor: "none", | Not Added Yet
     TimestampColor: "white",
     TimestampBGColor: "purple",
-    LogFilePath: "logs.txt" // Added But May Have Issues
+    LogFilePath: "logs.txt"
 };
 
 // Settings Config Function
@@ -36,25 +35,29 @@ const clog = console.log;
 /* -------------------------------------------------------------------------- */
 /*                                  Functions                                 */
 /* -------------------------------------------------------------------------- */
-function njsLog(message, type = "info") {
+function njsLog(message, forcedColor = null, type = "info") {
     const timestamp = new Date().toLocaleTimeString();
     const formattedTimestamp = chalk.bgKeyword(settings.TimestampBGColor).keyword(settings.TimestampColor)(`${timestamp}`);
     
     let formattedMessage;
-    switch (type) {
-        case "error":
-            formattedMessage = chalk.keyword(settings.ErrorColor)(message);
-            break;
-        default:
-            formattedMessage = chalk.keyword(settings.MessageColor)(message);
+    // Check if a forced color is provided
+    if (forcedColor) {
+        formattedMessage = chalk.keyword(forcedColor)(message);
+    } else {
+        // Default message handling based on type
+        switch (type) {
+            case "error":
+                formattedMessage = chalk.keyword(settings.ErrorColor)(message);
+                break;
+            default:
+                formattedMessage = chalk.keyword(settings.MessageColor)(message);
+        }
     }
     
     console.log(`[${formattedTimestamp}] | ${formattedMessage}`);
     logToFile(`${timestamp} | ${message}`, type);
-
 }
 
-// ChatGPT
 function logToFile(logMessage, type) {
     const logEntry = `[${type.toUpperCase()}] ${logMessage}\n`;
     fs.appendFile(settings.LogFilePath, logEntry, (err) => {
