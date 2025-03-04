@@ -2,4 +2,4 @@ remote_theme: pages-themes/hacker@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: NewfiesJS
-description: This module contains random things in every aspect, and is generally meant to make things a bit easier for me to do, however feel free to use it!
+description: NewfiesJS is a versatile logging and configuration module designed primarily for personal use, but open for anyone to use. It provides customizable logging options, including color settings and file logging, with support for dynamic changes on the fly. Great for those who want easy-to-use, configurable logging in their Node.js projects!
