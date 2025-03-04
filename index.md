@@ -31,8 +31,6 @@
 | TimestampBGColor| Any color supported by Chalk for text backgrounds| `purple`     |
 | LogFilePath     | Any valid file path                              | `logs.txt`   |
 
-<hr>
-
 # NewfiesJS Usage Examples
 
 ## Logging System
