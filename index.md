@@ -40,10 +40,10 @@
 	njs.njsLog(message, forced color, message type);
 
 |   Parameter  |             Allowed Values            | Default Value                                 | Required |
-|:------------:|:-------------------------------------:|-----------------------------------------------|----------|
-|    Message   |                  any                  | ``N/A``                                       | ✅        |
-| Forced Color | Any color supported by Chalk for text | ``null`` / ``MessageColor`` / ``ErrorColor``  | ❎        |
-| Message Type | ``info`` / ``error``                  | ``info``                                      | ❎        |
+|:------------:|:-------------------------------------:|-----------------------------------------------|:--------:|
+|    Message   |                  any                  | ``N/A``                                       |     ✅    |
+| Forced Color | Any color supported by Chalk for text | ``null`` / ``MessageColor`` / ``ErrorColor``  |     ❎    |
+| Message Type | ``info`` / ``error``                  | ``info``                                      |     ❎    |
 
 
 ### Logging System - App.Listen
